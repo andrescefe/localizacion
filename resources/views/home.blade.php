@@ -78,11 +78,11 @@
 
              var _data = data['features'];
              markers.clearLayers();
-             // console.log(_data[0].geometry.coordinates);
+            //  console.log(_data[0]);
              for (var i = 0; i < _data.length; i++) {
                  // console.log(_data);
                  var marker = L.marker(_data[i].geometry.coordinates).addTo(map);
-                 marker.bindPopup("<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p><p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque.</p>", {
+                 marker.bindPopup(_data[i].bindPopup, {
                      showOnMouseOver: true
                  });
 

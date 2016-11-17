@@ -3,7 +3,7 @@ import os
 from fabric.api import *
 from fabric.colors import green, red
 
-env.webapps_root = '/home/localizacion/www/'
+env.webapps_root = '/www'
 env.user_git     = 'andrescefe'
 
 def update(rama):
@@ -31,11 +31,11 @@ def deploy(rama = 'master'):
 
 def pruebas():
     env.project_name = ''
-    env.repo_root    = env.webapps_root
-    # env.repo_root    = os.path.join(env.webapps_root, env.project_name)
+    # env.repo_root    = '/home/localizacion/www'
+    env.repo_root    = os.path.join(env.webapps_root, env.project_name)
     env.user  = 'localizacion'
-    env.hosts = 'ssh-localizacion.alwaysdata.net'
-    # env.hosts = ['192.168.1.202','192.168.1.203']
+    # env.hosts = 'ssh-localizacion.alwaysdata.net'
+    env.hosts = ['ssh-localizacion.alwaysdata.net','']
     env.environment = 'Pruebas'
 
 def produccion():

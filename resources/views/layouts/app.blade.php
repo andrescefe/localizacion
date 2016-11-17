@@ -44,10 +44,16 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Localizacion') }}
+                    <div class="col-md-3">
+                      <a class="" href="{{ url('/') }}">
+                          <img src="{{ asset('images/logo.jpg') }}" class="img-circle" alt="" height="70px" width="90px" />
 
-                    </a>
+                          {{-- {{ config('app.name', 'Localizacion') }} --}}
+
+                      </a>
+                    </div>
+
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
